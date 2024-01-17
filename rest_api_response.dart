@@ -1,18 +1,18 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class ApiResponse {
+class RestApiResponse {
   static const String baseUrl = 'https://api.example.com';
   String? _jwtToken; // Private variable to store the JWT token
-  static ApiResponse? _instance; // Singleton instance
+  static RestApiResponse? _instance; // Singleton instance
 
   // Private constructor to enforce the singleton pattern
-  ApiResponse._();
+  RestApiResponse._();
 
   // Factory constructor to return the singleton instance
-  factory ApiResponse() {
+  factory RestApiResponse() {
     if (_instance == null) {
-      _instance = ApiResponse._();
+      _instance = RestApiResponse._();
     }
     return _instance!;
   }
